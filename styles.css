@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: #222;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+#mfDrawer {
+  width: 20%;
+  /* Define a largura do mf_drawer como 20% da largura total */
+}
+
+#mfVideos {
+  flex: 1;
+  /* Faz com que mf_videos ocupe o restante do espaço disponível */
+}
+
+/* Estilize os iframes para ocuparem todo o espaço dos seus containers */
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  /* Remova a borda padrão dos iframes */
+}
+
+/* Media query para ajustar o layout em dispositivos móveis */
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+    flex-direction: column;
+    /* Mudança para coluna para melhor adaptação */
+  }
+
+  #mfDrawer {
+    /* Reduz a altura de mf_drawer em dispositivos móveis */
+    width: 100%;
+  }
+
+  #mfVideos {
+    /* Continua ocupando o restante do espaço disponível */
+    width: 100%;
+    padding: 2em;
+    background-color: red;
+  }
+}

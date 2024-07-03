@@ -1,0 +1,17 @@
+body {
+  background-color: #222;
+  height: auto;
+  margin-left: 2em;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #222;
+  gap: 1em;
+}
+
+h1 {
+  color: white;
+}
