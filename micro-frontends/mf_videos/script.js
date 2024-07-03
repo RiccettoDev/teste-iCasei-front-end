@@ -2,8 +2,6 @@ const searchInput = document.getElementById('searchInput');
 const searchButton = document.getElementById('searchButton');
 const videoResults = document.getElementById('videoResults');
 
-const YOUR_YOUTUBE_API_KEY = 'AIzaSyBEYGQj-gAWPbkmDc_i1gDFMCcBX2yHyVM';
-
 searchButton.addEventListener('click', async () => {
   const searchTerm = searchInput.value.trim();
 
@@ -13,7 +11,7 @@ searchButton.addEventListener('click', async () => {
   }
 
   try {
-    const response = await fetch(`https://www.googleapis.com/youtube/v3/search?q=${encodeURIComponent(searchTerm)}&key=${YOUR_YOUTUBE_API_KEY}&part=snippet&type=video&maxResults=10`);
+    const response = await fetch(`http://localhost:3000/api/search?q=${encodeURIComponent(searchTerm)}`);
     const data = await response.json();
 
     if (data.error) {
@@ -33,14 +31,16 @@ function displayVideos(videos) {
   videos.forEach(video => {
     const videoId = video.id.videoId;
     const videoTitle = video.snippet.title;
-    const videoThumbnail = video.snippet.thumbnails.default.url;
+    const videoThumbnail = video.snippet.thumbnails.medium.url;
 
     videoHtml += `
       <div class="video-item">
-        <a href="https://www.youtube.com/watch?v=${videoId}" target="_blank">
-          <img src="${videoThumbnail}" alt="${videoTitle}">
-          <h3>${videoTitle}</h3>
-        </a>
+        <img src="${videoThumbnail}" alt="${videoTitle}">
+        <h3>${videoTitle}</h3>
+        <div class="video-buttons">
+          <a class="play-button" href="https://www.youtube.com/watch?v=${videoId}" target="_blank">Play</a>
+          <button class="like-button">Like</button>
+        </div>
       </div>
     `;
   });

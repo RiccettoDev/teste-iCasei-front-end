@@ -13,19 +13,16 @@ body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
-  /* Prevenir rolagem indesejada */
 }
 
 #mfDrawer {
   width: 20%;
   height: 100%;
-  /* Ocupa toda a altura em layouts maiores */
 }
 
 #mfVideos {
   flex: 1;
   height: 100%;
-  /* Ocupa toda a altura em layouts maiores */
 }
 
 iframe {
@@ -40,26 +37,21 @@ iframe {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    /* Centraliza verticalmente */
     height: 100vh;
-    /* Garante altura total da visualização */
   }
 
   #mfDrawer {
     width: 100%;
     height: 20%;
-    /* Ocupa 20% da altura em dispositivos móveis */
   }
 
   #mfVideos {
     width: 100%;
     height: 80%;
-    /* Ocupa o restante da altura em dispositivos móveis */
   }
 
   iframe {
     width: 100%;
     height: 100%;
-    /* Garante altura total do iframe */
   }
 }
