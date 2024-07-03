@@ -1,3 +1,4 @@
+/* Estilos globais */
 * {
   padding: 0;
   margin: 0;
@@ -10,43 +11,55 @@ body {
   display: flex;
   width: 100%;
   height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  /* Prevenir rolagem indesejada */
 }
 
 #mfDrawer {
   width: 20%;
-  /* Define a largura do mf_drawer como 20% da largura total */
+  height: 100%;
+  /* Ocupa toda a altura em layouts maiores */
 }
 
 #mfVideos {
   flex: 1;
-  /* Faz com que mf_videos ocupe o restante do espaço disponível */
+  height: 100%;
+  /* Ocupa toda a altura em layouts maiores */
 }
 
-/* Estilize os iframes para ocuparem todo o espaço dos seus containers */
 iframe {
   width: 100%;
   height: 100%;
   border: none;
-  /* Remova a borda padrão dos iframes */
 }
 
-/* Media query para ajustar o layout em dispositivos móveis */
+/* Media query para dispositivos móveis */
 @media (max-width: 768px) {
   body {
-    width: 100%;
     flex-direction: column;
-    /* Mudança para coluna para melhor adaptação */
+    align-items: center;
+    justify-content: flex-start;
+    /* Centraliza verticalmente */
+    height: 100vh;
+    /* Garante altura total da visualização */
   }
 
   #mfDrawer {
-    /* Reduz a altura de mf_drawer em dispositivos móveis */
     width: 100%;
+    height: 20%;
+    /* Ocupa 20% da altura em dispositivos móveis */
   }
 
   #mfVideos {
-    /* Continua ocupando o restante do espaço disponível */
     width: 100%;
-    padding: 2em;
-    background-color: red;
+    height: 80%;
+    /* Ocupa o restante da altura em dispositivos móveis */
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    /* Garante altura total do iframe */
   }
 }
