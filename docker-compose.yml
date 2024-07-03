@@ -1,0 +1,25 @@
+version: '3'
+services:
+  bff:
+    build:
+      context: ./bff
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - mf_drawer
+      - mf_videos
+  mf_drawer:
+    build:
+      context: ./micro-frontends/mf_drawer
+      dockerfile: Dockerfile
+    ports:
+      - "8081:80"
+  mf_videos:
+    build:
+      context: ./micro-frontends/mf_videos
+      dockerfile: Dockerfile
+    ports:
+      - "8082:80"
