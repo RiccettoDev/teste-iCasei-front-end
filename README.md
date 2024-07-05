@@ -10,7 +10,7 @@ docker-compose up --build
 ## Execução das Especificações tecnicas
 - [ ✔ ] Ultilizado ``Node.js`` para controle de sessão e BFF 
 - [ ✔ ] Utilizado a [API de busca do YouTube](https://developers.google.com/youtube/v3/docs/search/list)
-- [ ✔ ] Desing **responsivo**
+- Desing **responsivo**
 - **Navegação por rotas** é requisito obrigatório
 - [ ✔ ] **Não utilizar** framework JS (React, Vue, Angular ou frameworks relacionados)
 - [ ✔ ] Cores livres, layout livre, imagens livres
