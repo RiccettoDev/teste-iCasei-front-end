@@ -19,9 +19,7 @@ docker-compose up --build
 - [ ✔ ] Utilizar **microfront** para cada aplicação com BFF
 - [ ✔ ] Utilizar **docker** para microfronts e BFF
 - Obrigatório **testes unitários**
-
-``Não consegui finalizar o projeto no prazo estipulado após o recebimento do e-mail``
-
+- 
 ---
 
 <img src="./img/imgReadme.PNG" alt="Descrição da imagem" width="900" height="600" />
